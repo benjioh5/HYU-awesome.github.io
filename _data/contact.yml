@@ -1,0 +1,19 @@
+name: contacts
+label: 아래에 연락처가 있습니다.
+description: HYU-awesome은 공개 프로젝트이며 여러분의 관심과 기여가 필요합니다.
+contacts:
+  -
+    name: github
+    label: HYU-awesome
+    icon: github
+    url: https://github.com/HYU-awesome
+  -
+    name: mail
+    label: maytryark@gmail.com
+    icon: envelope
+    url: mailto:maytryark@gmail.com
+  -
+    name: facebook
+    label: maytryark
+    icon: facebook
+    url: https://fb.com/maytryark
