@@ -1,1 +1,64 @@
-Hello, World!
+---
+title: Home
+layout: default
+---
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">{{ site.main-title }}</h1>
+                <hr>
+                <p>{{ site.description }}</p>
+            </div>
+        </div>
+    </header>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ site.data.service.label }}</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for service in site.data.service.services %}
+                    <a class="nounderline" href="{{ service.url }}">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="service-box">
+                                <i class="fa fa-4x fa-{{ service.icon }} text-primary sr-icons"></i>
+                                <h3>{{ service.label }}</h3>
+                                <p class="text-muted">{{ service.description }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ site.data.contact.label }}</h2>
+                    <hr class="primary">
+                    <p>{{ site.data.contact.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for contact in site.data.contact.contacts %}
+                    <a class="nounderline" href="{{ contact.url }}">
+                        <div class="col-lg-4 col-md-6 text-center">
+                            <i class="fa fa-{{ contact.icon }} fa-3x sr-contact"></i>
+                            <p>{{ contact.label }}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
